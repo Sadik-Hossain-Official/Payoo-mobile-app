@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- css add-->
+    <link rel="stylesheet" href="project.css" type="text/css">
+    <!-- Daisy UI add  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind add  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome add  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    This is Home page
+<body class="bg-[#f4f5f7] h-[100vh]">
+    <!-- navbar  -->
+    <header>
+        <nav class="flex items-center justify-between">
+            <div class="heading flex items-center gap-1 ml-4">
+                <a href="Home.html"><img src="assets/Group.png" alt="site-logo" class="h-[50px]"></a>
+                <div class="">
+                    <h2 class="font-bold">$ <span>45000</span></h2>
+                    <p class="text-gray-500 text-sm">Available Balance</p>
+                </div>
+            </div>
+            <div class="mr-2">
+                    <a href="index.html"><button class="border-2 rounded-[8px] px-3.5 py-1.5 border-gray-400 text-gray-500 font-bold cursor-pointer hover:bg-gray-300"><i class="fa-solid fa-right-from-bracket rotate-180"></i> Log out</button></a>
+            </div>
+        </nav><hr class="mt-2.5 text-gray-300 border-t-2">
+    </header>
+    <main>
+        <div class="greeting">
+            <h3 class="font-extrabold text-3xl">🔥 Welcome to Payooo!</h3>
+            <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
