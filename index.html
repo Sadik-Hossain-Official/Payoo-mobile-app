@@ -13,18 +13,23 @@
     <!-- font-awesome add  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f4f5f7]  flex justify-center items-center h-[100vh]">
-    <!-- login form -->
+<body class="bg-[#f4f5f7]  flex flex-col justify-center items-center h-[100vh]">
+    <!-- login page -->
+        <div class="above-img bg-[url(assets/bg.png)] bg-cover w-3xs h-32 flex items-center justify-center">
+            <img src="assets/Group.png" alt="">
+        </div>
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-xs border p-4">
             <!-- <legend class="fieldset-legend">Login</legend> -->
           
-            <label class="label">Mobile</label>
-            <input type="number" class="input rounded-[30px]" placeholder="Enter your number" />
+            <label class="label font-bold text-black">Mobile</label>
+            <input id="num" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter your number" />
           
-            <label class="label">4-Digit PIN</label>
-            <input type="number" class="input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
+            <label class="label font-bold text-black">4-Digit PIN</label>
+            <input id="pin" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
           
-            <button class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Login</button>
+            <button id="btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Login</button>
           </fieldset>
-</body>
+        <!-- js added  -->
+        <script src="script.js"></script>
+ </body>
 </html>
