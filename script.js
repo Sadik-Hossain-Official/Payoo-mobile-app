@@ -13,7 +13,7 @@ button.addEventListener("click",function()
    if(Mobile===Number && PIN===Pin)
    { 
      console.log("condition matched")
-     window.location.href="Home.html"
+     window.location.href="payooo.html"
      //window.open("Home.html", "_blank"); // works like target="blank";
    }
    else{

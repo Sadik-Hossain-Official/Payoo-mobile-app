@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Money</title>
+    <title>Payooo</title>
     <!-- css add-->
     <link rel="stylesheet" href="project.css" type="text/css">
     <!-- Daisy UI add  -->
@@ -15,11 +15,11 @@
 </head>
 <body class="bg-[#f4f5f7]  flex flex-col justify-center items-center h-[100vh]">
     <div class="bg-white rounded-b-3xl">
-        <!-- navbar  -->
         <header>
+            <!-- navbar  -->
             <nav class="flex items-center justify-between">
                 <div class="heading flex items-center gap-1 ml-4">
-                    <a href="Home.html"><img src="assets/Group.png" alt="site-logo" class="h-[50px]"></a>
+                    <a href="payooo.html"><img src="assets/Group.png" alt="site-logo" class="h-[50px]"></a>
                     <div class="">
                         <h2 class="font-bold">$ <span id="current-balance">45000</span></h2>
                         <p class="text-gray-500 text-sm">Available Balance</p>
@@ -36,35 +36,35 @@
                 <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
             </div>
             <!-- menu  -->
-                <!-- add money  -->
             <div class="menu mt-[24px] grid grid-cols-3 gap-4 mx-auto">
-               <a href="addMoney.html"> <div class="add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
-                <img src="assets/wallet1.png" alt="add-money">
-                <p class="text-gray-600 font-semibold">Add Money</p>
-            </div></a>
+                <!-- add money  -->
+                <div id="addMoney-click" class="add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                    <img src="assets/wallet1.png" alt="add-money">
+                    <p class="text-gray-600 font-semibold">Add Money</p>
+                </div>
                 <!-- cash out  -->
-                <div class="cash-out border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="cashOut-click" class="cash-out border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/send1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Cash Out</p>
                 </div>
                 <!-- transfer money  -->
-                <div class="Transfer-money border-2 border-gray-400 rounded-[12px] px-[px] py-[10px] flex flex-col items-center justify-center">
+                <div id="transferMoney-click" class="Transfer-money border-2 border-gray-400 rounded-[12px] px-[px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/money1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transfer
                         Money</p>
                 </div>
                 <!-- get bonus  -->
-                <div class="get-bonus border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="getBonus-click" class="get-bonus border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/bonus1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Get Bonus</p>
                 </div>
                 <!-- pay bill  -->
-                <div class="Pay-bill border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="payBill-click" class="Pay-bill border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/purse1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Pay Bill</p>
                 </div>
                 <!-- transaction  -->
-                <div class="Transactions border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="transaction-click" class="Transactions border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/transaction1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transactions</p>
                 </div>
@@ -72,31 +72,49 @@
         </main>
     </div>
         <!-- add money section  -->
-        <div class="">
+        <div id="add-money-parent">
             <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
                 <legend class="fieldset-legend font-bold text-2xl">Add Money</legend>
                 <label for="Bank-selection" class="font-bold text-black text-[13px]">Select A Bank</label>
-                <select class="select rounded-[30px] bg-gray-100 w-full" id="bank">
-                    <option disabled selected>Select Bank</option>
+                <select class="select rounded-[30px] bg-gray-100 w-full" id="bank" required>
+                    <option value="" disabled selected>Select Bank</option>
                     <option>DBBL</option>
                     <option>UCB</option>
                     <option>Dhaka bank</option>
                   </select>
               
                 <label class="label font-bold text-black">Bank Account Number</label>
-                <input id="acc-no" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" />
+                <input id="acc-no" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" required />
               
                 <label class="label font-bold text-black">Add Amount</label>
-                <input id="add-money" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" />
+                <input id="add-money" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" required />
               
                 <label class="label font-bold text-black">PIN Number</label>
-                <input id="acc-pin" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
+                <input id="acc-pin" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" required />
               
                 <button id="add-money-btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Add Money</button>
               </fieldset>    
         </div>
-    
+        <!-- cash out section -->
+        <div id="cash-out-parent" style="display:none;">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
+                <legend class="fieldset-legend font-bold text-2xl">Cash Out</legend>
+              
+                <label class="label font-bold text-black">Bank Account Number</label>
+                <input id="acc-no" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" required />
+              
+                <label class="label font-bold text-black">Add Amount</label>
+                <input id="remove-money" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" required />
+              
+                <label class="label font-bold text-black">PIN Number</label>
+                <input id="acc-pin" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" required />
+              
+                <button id="withdraw-money-btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Withdraw Money</button>
+              </fieldset>    
+        </div>
+
+        
     <!-- js added  -->
-    <script src="addMoney.js"></script>
+    <script src="payooo.js"></script>
 </body>
 </html>
