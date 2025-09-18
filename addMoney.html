@@ -21,7 +21,7 @@
                 <div class="heading flex items-center gap-1 ml-4">
                     <a href="Home.html"><img src="assets/Group.png" alt="site-logo" class="h-[50px]"></a>
                     <div class="">
-                        <h2 class="font-bold">$ <span>45000</span></h2>
+                        <h2 class="font-bold">$ <span id="current-balance">45000</span></h2>
                         <p class="text-gray-500 text-sm">Available Balance</p>
                     </div>
                 </div>
@@ -35,28 +35,35 @@
                 <h3 class="font-extrabold text-3xl">🔥 Welcome to Payooo!</h3>
                 <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
             </div>
+            <!-- menu  -->
+                <!-- add money  -->
             <div class="menu mt-[24px] grid grid-cols-3 gap-4 mx-auto">
-                <div class="add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
-                    <img src="assets/wallet1.png" alt="add-money">
-                    <p class="text-gray-600 font-semibold">Add Money</p>
-                </div>
+               <a href="addMoney.html"> <div class="add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <img src="assets/wallet1.png" alt="add-money">
+                <p class="text-gray-600 font-semibold">Add Money</p>
+            </div></a>
+                <!-- cash out  -->
                 <div class="cash-out border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/send1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Cash Out</p>
                 </div>
+                <!-- transfer money  -->
                 <div class="Transfer-money border-2 border-gray-400 rounded-[12px] px-[px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/money1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transfer
                         Money</p>
                 </div>
+                <!-- get bonus  -->
                 <div class="get-bonus border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/bonus1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Get Bonus</p>
                 </div>
+                <!-- pay bill  -->
                 <div class="Pay-bill border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/purse1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Pay Bill</p>
                 </div>
+                <!-- transaction  -->
                 <div class="Transactions border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/transaction1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transactions</p>
@@ -66,10 +73,10 @@
     </div>
         <!-- add money section  -->
         <div class="">
-            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-xs border p-4 bg-white">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
                 <legend class="fieldset-legend font-bold text-2xl">Add Money</legend>
-                <label for="Bank-selevtion" class="font-bold text-black text-[13px]">Select A Bank</label>
-                <select class="select rounded-[30px] bg-gray-100" id="bank">
+                <label for="Bank-selection" class="font-bold text-black text-[13px]">Select A Bank</label>
+                <select class="select rounded-[30px] bg-gray-100 w-full" id="bank">
                     <option disabled selected>Select Bank</option>
                     <option>DBBL</option>
                     <option>UCB</option>
@@ -77,19 +84,19 @@
                   </select>
               
                 <label class="label font-bold text-black">Bank Account Number</label>
-                <input id="ac-no" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" />
+                <input id="acc-no" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" />
               
                 <label class="label font-bold text-black">Add Amount</label>
-                <input id="amount" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" />
+                <input id="add-money" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" />
               
                 <label class="label font-bold text-black">PIN Number</label>
-                <input id="" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
+                <input id="acc-pin" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
               
-                <button id="add-money" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Add Money</button>
+                <button id="add-money-btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Add Money</button>
               </fieldset>    
         </div>
     
     <!-- js added  -->
-    <script src="script.js"></script>
+    <script src="addMoney.js"></script>
 </body>
 </html>
