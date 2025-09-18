@@ -65,18 +65,29 @@
         </main>
     </div>
         <!-- add money section  -->
-        <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-xs border p-4">
-            <!-- <legend class="fieldset-legend">Login</legend> -->
-          
-            <label class="label font-bold text-black">Mobile</label>
-            <input id="num" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter your number" />
-          
-            <label class="label font-bold text-black">4-Digit PIN</label>
-            <input id="pin" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
-          
-            <button id="btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Login</button>
-          </fieldset>
-    
+        <div class="">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-xs border p-4 bg-white">
+                <legend class="fieldset-legend font-bold text-2xl">Add Money</legend>
+                <label for="Bank-selevtion" class="font-bold text-black text-[13px]">Select A Bank</label>
+                <select class="select rounded-[30px] bg-gray-100" id="bank">
+                    <option disabled selected>Select Bank</option>
+                    <option>DBBL</option>
+                    <option>UCB</option>
+                    <option>Dhaka bank</option>
+                  </select>
+              
+                <label class="label font-bold text-black">Bank Account Number</label>
+                <input id="ac-no" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" />
+              
+                <label class="label font-bold text-black">Add Amount</label>
+                <input id="amount" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" />
+              
+                <label class="label font-bold text-black">PIN Number</label>
+                <input id="" type="number" class=" bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
+              
+                <button id="add-money" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Add Money</button>
+              </fieldset>    
+        </div>
     
     <!-- js added  -->
     <script src="script.js"></script>
