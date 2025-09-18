@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Add Money</title>
     <!-- css add-->
     <link rel="stylesheet" href="project.css" type="text/css">
     <!-- Daisy UI add  -->
@@ -13,8 +13,8 @@
     <!-- font-awesome add  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-[#f4f5f7] h-[100vh]">
-<div class="bg-white rounded-b-3xl">
+<body class="bg-[#f4f5f7]  flex flex-col justify-center items-center h-[100vh]">
+    <div class="bg-white rounded-b-3xl">
         <!-- navbar  -->
         <header>
             <nav class="flex items-center justify-between">
@@ -63,10 +63,21 @@
                 </div>
             </div>
         </main>
-</div>
-         <!-- latest payment section -->
-        
-         
+    </div>
+        <!-- add money section  -->
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-xs border p-4">
+            <!-- <legend class="fieldset-legend">Login</legend> -->
+          
+            <label class="label font-bold text-black">Mobile</label>
+            <input id="num" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter your number" />
+          
+            <label class="label font-bold text-black">4-Digit PIN</label>
+            <input id="pin" type="number" class=" font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" />
+          
+            <button id="btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Login</button>
+          </fieldset>
+    
+    
     <!-- js added  -->
     <script src="script.js"></script>
 </body>
