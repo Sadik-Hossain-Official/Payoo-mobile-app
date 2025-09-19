@@ -26,7 +26,6 @@ addMoney.addEventListener("click",function(e)
     document.getElementById("current-balance").innerText= totalBalance;
 })
 
-
 // Cash Out feature 
 const removeMoney=document.getElementById("withdraw-money-btn");
 removeMoney.addEventListener("click",function()
@@ -52,10 +51,18 @@ document.getElementById("addMoney-click").addEventListener("click",function()
 {
     document.getElementById("add-money-parent").style.display="block";
     document.getElementById("cash-out-parent").style.display="none";
+    document.getElementById("transfer-money-parent").style.display="none";
 })
 
 document.getElementById("cashOut-click").addEventListener("click",function()
 {
     document.getElementById("add-money-parent").style.display="none";
     document.getElementById("cash-out-parent").style.display="block";
+    document.getElementById("transfer-money-parent").style.display="none";
+})
+document.getElementById("transferMoney-click").addEventListener("click",function()
+{
+    document.getElementById("add-money-parent").style.display="none";
+    document.getElementById("cash-out-parent").style.display="none";
+    document.getElementById("transfer-money-parent").style.display="block";
 })

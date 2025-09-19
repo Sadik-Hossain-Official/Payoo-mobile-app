@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-[#f4f5f7]  flex flex-col justify-center items-center h-[100vh]">
-    <div class="bg-white rounded-b-3xl">
+    <section class="bg-white rounded-b-3xl">
         <header>
             <!-- navbar  -->
             <nav class="flex items-center justify-between">
@@ -38,41 +38,42 @@
             <!-- menu  -->
             <div class="menu mt-[24px] grid grid-cols-3 gap-4 mx-auto">
                 <!-- add money  -->
-                <div id="addMoney-click" class="add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="addMoney-click" class="action-btn add-money border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/wallet1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Add Money</p>
                 </div>
                 <!-- cash out  -->
-                <div id="cashOut-click" class="cash-out border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="cashOut-click" class="action-btn cash-out border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/send1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Cash Out</p>
                 </div>
                 <!-- transfer money  -->
-                <div id="transferMoney-click" class="Transfer-money border-2 border-gray-400 rounded-[12px] px-[px] py-[10px] flex flex-col items-center justify-center">
+                <div id="transferMoney-click" class="action-btn Transfer-money border-2 border-gray-400 rounded-[12px] px-[px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/money1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transfer
                         Money</p>
                 </div>
                 <!-- get bonus  -->
-                <div id="getBonus-click" class="get-bonus border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="getBonus-click" class="action-btn get-bonus border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/bonus1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Get Bonus</p>
                 </div>
                 <!-- pay bill  -->
-                <div id="payBill-click" class="Pay-bill border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="payBill-click" class="action-btn Pay-bill border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/purse1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Pay Bill</p>
                 </div>
                 <!-- transaction  -->
-                <div id="transaction-click" class="Transactions border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
+                <div id="transaction-click" class="action-btn Transactions border-2 border-gray-400 rounded-[12px] px-[20px] py-[10px] flex flex-col items-center justify-center">
                     <img src="assets/transaction1.png" alt="add-money">
                     <p class="text-gray-600 font-semibold">Transactions</p>
                 </div>
             </div>
         </main>
-    </div>
-        <!-- add money section  -->
-        <div id="add-money-parent">
+    </section>
+    <section class="h-[100vh]">
+         <!-- add money section  -->
+         <div class="forms" id="add-money-parent" >
             <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
                 <legend class="fieldset-legend font-bold text-2xl">Add Money</legend>
                 <label for="Bank-selection" class="font-bold text-black text-[13px]">Select A Bank</label>
@@ -96,7 +97,7 @@
               </fieldset>    
         </div>
         <!-- cash out section -->
-        <div id="cash-out-parent" style="display:none;">
+        <div class="forms" id="cash-out-parent" style="display:none;">
             <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
                 <legend class="fieldset-legend font-bold text-2xl">Cash Out</legend>
               
@@ -112,9 +113,43 @@
                 <button id="withdraw-money-btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Withdraw Money</button>
               </fieldset>    
         </div>
+        <!-- transfer money section  -->
+        <div class="forms" id="transfer-money-parent" style="display:none;">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-[24px] w-[90vw] border p-4 bg-white">
+                <legend class="fieldset-legend font-bold text-2xl">Transfer Money</legend>
+              
+                <label class="label font-bold text-black">User Account Number</label>
+                <input id="acc-no" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 11 digit account number" required />
+              
+                <label class="label font-bold text-black">Enter Amount</label>
+                <input id="remove-money" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Add amount" required />
+              
+                <label class="label font-bold text-black">PIN Number</label>
+                <input id="acc-pin" type="number" class="w-full bg-gray-100 font-light text-gray-400 input rounded-[30px]" placeholder="Enter 4 Digit PIN" required />
+              
+                <button id="withdraw-money-btn" class="btn btn-neutral mt-4 rounded-[30px] bg-blue-600">Transfer Money</button>
+              </fieldset>    
+        </div>
+        <!-- transaction section  -->
+        <div class="forms w-[90vw]" id="transaction-parent"  style="display:none;">
+            <div class="flex items-center justify-between">
+                <h4 class="font-bold my-5 text-lg">Transactions</h4>
+                <p class="text-sm text-gray-500">View all</p>
+            </div>
+            <!-- transaction history  -->
+            <div id="transaction-container">
+                
+            </div>
+            
 
+        </div>
+
+
+    </section>
         
     <!-- js added  -->
-    <script src="payooo.js"></script>
+    <!-- <script src="payooo.js"></script> -->
+    <script src="reusecode.js"></script>
+    <script src="transaction.js"></script>
 </body>
 </html>
